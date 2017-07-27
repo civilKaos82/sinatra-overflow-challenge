@@ -4,7 +4,9 @@
 
 <h4>Recent questions asked:</h4>
 <ul>
-  <li><a href="http://www.google.com">Question here.</a></li>
+  <%@questions.reverse.each do |question|%>
+  <li><a href="/question/<%=question.id%>"><%=question.title%></a></li>
+<% end %>
 </ul>
 
-<h4>Have a question? <a href="http://www.google.com">Submit your own question here.</a></h4>
+<h4>Have a question? <a href="/question/new">Submit your own question here.</a></h4>
