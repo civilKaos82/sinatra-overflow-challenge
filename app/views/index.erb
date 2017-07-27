@@ -1,0 +1,12 @@
+<header>
+  <h1>JTAG. Ask your question and see if James has a tattoo about it.</h1>
+</header>
+
+<h4>Recent questions asked:</h4>
+<ul>
+  <%@questions.reverse.each do |question|%>
+  <li><a href="/question/<%=question.id%>"><%=question.title%></a></li>
+<% end %>
+</ul>
+
+<h4>Have a question? <a href="/question/new">Submit your own question here.</a></h4>
