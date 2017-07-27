@@ -2,10 +2,13 @@
   <h1><%=@question.title%></h1>
 </header>
 
+<p><%=@question.title%></p>
+
 <h4>Here's what our community thinks:</h4>
 <ul>
-  <li>BODY HERE answer.text.</li>
-  <li>Another answer. Each of these items will appear with answer text, username, votes, etc.</li>
+  <% @answers_to_question.each do |answer|%>
+  <li><%=answer.content%></li>
+  <% end %>
 </ul>
 
 <h4>Have thoughts? Thankfully we have an answer form</h4>

@@ -12,7 +12,7 @@ end
 
 get '/question/:id' do
   @question = Question.find(params[:id])
-  # create array of all answers that correspond to question  -> AR association of question.answers
+  @answers_to_question = @question.answers
   erb :'/question/show'
 end
 
